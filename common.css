@@ -18,16 +18,7 @@
 			font-family:serif;
 		}
 
-.left {
-	float:left;
-	clear:left;
-}
-
-.right {
-	float:right;
-	clear:right;
-}
-
+/* the following are used to make div tables suitable for images */
 div.gallery {
 	max-width:100%;
 	display:table;
@@ -42,17 +33,4 @@ div.gcell {
 	max-width:50%;
 	vertical-align:top;
 }
-
-/* CSS for all screen rules */
-@media screen {
-	.QR {
-		display:none;
-	}
-}
-
-/* CSS for all print rules */
-@media print {
-	.QR a:link:after, .QR a:visited after {
-		content: " (" attr(href) ")";
-	}
 }
