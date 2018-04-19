@@ -120,13 +120,6 @@ a:active {
  	max-width:100%; 
  	} 
 
-
-div.divider {
-	clear:both;
-	background: linear-gradient(#999999, #C0C0C0);
-	background-color:#999999;
-}
-
 article, #nav {
 	text-align:left;
 }
