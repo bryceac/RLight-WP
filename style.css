@@ -1,0 +1,520 @@
+@charset "utf-8";
+/*
+Theme Name: RLight
+Theme URI: http://brycecampbell.me/rlight.html
+Author: Bryce Campbell
+Author URI: http://brycecampbell.me
+Description: light two column layout with gradient banner and separators and responsive.
+Version: 0.1
+License: MIT
+License URI: https://www.debian.org/legal/licenses/mit
+Tags: blue, gray, white, two-colums, right-sidebar, flexible-width, responsive
+Text Domain: rlight */
+
+/* CSS viewport */
+viewport {
+	zoom:1.0;
+	width:device-width;
+}
+
+/* rules to be shared regardless of resolution */
+@media screen {
+body {
+	font-family:Baskerville, Georgia, Times, Times New Roman, serif;
+	font-size:1em;
+	text-align:center;
+	background-color:#C0C0C0;
+}
+
+#wrapper {
+	background-color:#FFFFFF;
+}
+
+#header, #footer {
+	background: linear-gradient(#999999, #C0C0C0);
+	background-color:#999999;
+	clear: both;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family:Verdana, Arial, sans-serif;
+}
+
+article h1, article h2, article h3, article h4, article h5, article h6 {
+	text-align:center;
+}
+
+#banner {
+	color:#F5F5DC;
+	background: linear-gradient(#0099FF, #000F1A);
+	background-color:#0099FF;
+	text-align:left;
+}
+
+#banner p {
+	margin:0;
+	padding:0;
+}
+
+/* make all link above header div beige and have not underline present */		 
+ #banner a:link, #banner a:visited, #banner a:active { 
+	color:#F5F5DC;
+	text-decoration:none;
+ 										} 
+ 										 
+ /* display underline if hovering over link in space above header div */										 
+ #banner a:hover, #banner a:focus { 
+ 				text-decoration:underline; 
+ 			} 
+ 
+ 
+ /* make clicked link in space above header div italics */			 
+ #banner a:active { 
+ 					font-style:italic; 
+ 				} 
+ 				 
+ /* the following rules apply to regular links and share the same features as those marked with an id of top, except links are not beige. */ 
+ a:link {
+	color:#0000FF;
+	text-decoration:none;
+}
+
+a:visited {
+	color:#FF0000;
+}
+
+a:hover, a:focus {
+	font-weight:bold;
+	text-decoration:underline;
+}
+
+a:active {
+			font-style:italic;
+			color:#FF0000;
+		}
+
+ 
+ 
+ /* post content marked left on the left inside parent element */ 
+ .left { 
+ 		float:left; 
+ 		clear:left; 
+ 	}  	 
+ /* post content marked right on the right inside parent element */	 
+ .right { 
+ 			float:right; 
+ 			clear:right; 
+ 		} 
+ 		 
+ /* remove bullets in comments */ 
+ #comments ul { 
+ 				list-style-type:none; 
+ 			} 
+ #post-nav, article { 
+ 					clear:both; 
+ 				} 
+ 
+ 
+ /* make comment field adjust to screen size */ 
+ #comments textarea { 
+ 	max-width:100%; 
+ 	} 
+
+
+div.divider {
+	clear:both;
+	background: linear-gradient(#999999, #C0C0C0);
+	background-color:#999999;
+}
+
+article, #nav {
+	text-align:left;
+}
+
+/* resize post images */ 
+ article img { 
+ 	max-width:100%; 
+ 	height:auto; 
+ } 
+ 	 
+ /* format rules for pub date */	 
+ .date { 
+ 		text-align:center; 
+ 	}
+	
+article footer {
+	text-align:center;
+}
+
+/* class to hide submit button, according to Stackoverflow question about making return key submit */
+.hidden-submit {
+	border: 0 none;
+    height: 0;
+    width: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden
+}
+
+} /* end shared screen rules */
+
+/* rules to be used for screen resolution under 375px */
+@media screen and (max-width:374px)
+{
+	body {
+		font-size:2em;
+	}
+#nav {
+	width:100%;
+}
+
+/* display only nav elements in small screen */
+#other {
+	display:none;
+}
+
+#menu {
+	float:left;
+	list-style-type:none;
+	margin:0;
+	padding:10px 0 0 0;
+}
+
+#menu li {
+		float:left;
+		text-decoration:none;
+		margin:0 0 0 10px;
+		padding:0;
+		position:relative;
+	}
+
+#menu ul {
+		display:none;
+		list-style-type:none;
+		position:absolute;
+		top:100%;
+		left:0;
+		background:#FFFFFF;
+		padding:0;
+}
+
+#menu ul li {
+		float:none;
+		margin-top:20px;
+}
+
+#menu li:hover > ul, #menu li:focus > ul, #menu li:active > ul {
+		display:block;
+}
+
+#menu > li {
+	font-family:Verdana, Arial, sans-serif;
+	font-weight:bold;
+}
+
+#menu > li li {
+	font-family:Baskerville, Georgia, Times, Times New Roman, serif;
+	font-weight:normal;
+}
+
+#searchform {
+	float:right;
+	margin:0;
+	padding:0;
+	max-width:50%;
+}
+
+#search {
+	margin-top:5px;
+	padding-top:5px;
+}
+
+#search input {
+	max-width:100%;
+}
+
+#other {
+	display:none;
+}
+
+#nav, main {
+	clear:both;
+}
+
+.nav-links {
+	font-size:2em;
+	margin:20px 0 20px 0;
+}
+
+.nav-links a {
+	margin-left:10px;
+	padding:10px;
+	border-style:solid;
+	border-color:#000000;
+	border-radius:5px;
+}
+
+.nav-links a.next_page, .nav-links.prev_page {
+	margin-left:0;
+	border-style:none;
+	border-radius:0;
+}
+} /* end rules for resolutions below 375px */
+
+/* rules to be used for screen resolution less than or equal to 980px */
+@media screen and  (min-width:375px) and (max-width:980px)
+{
+	body {
+		font-size:2em;
+	}
+	
+#nav {
+	width:100%;
+}
+
+#other {
+	display:none;
+}
+
+#menu {
+	float:left;
+	list-style-type:none;
+	margin:0;
+	padding:10px 0 0 0;
+}
+
+#menu li {
+		float:left;
+		text-decoration:none;
+		margin:0 0 0 20px;
+		padding:0;
+		position:relative;
+	}
+
+#menu ul {
+		display:none;
+		list-style-type:none;
+		position:absolute;
+		top:100%;
+		left:0;
+		background:#FFFFFF;
+		padding:0;
+}
+
+#menu ul li {
+		float:none;
+		margin-top:20px;
+}
+
+#menu li:hover > ul, #menu li:focus > ul, #menu li:active > ul {
+		display:block;
+}
+
+#menu > li {
+	font-family:Verdana, Arial, sans-serif;
+	font-weight:bold;
+}
+
+#menu > li li {
+	font-family:Baskerville, Georgia, Times, Times New Roman, serif;
+	font-weight:normal;
+}
+
+#searchform {
+	float:right;
+	margin:0;
+	padding:0;
+	max-width:100%;
+}
+
+#search {
+	margin-top:5px;
+	padding-top:5px;
+}
+
+#search input {
+	max-width:100%;
+}
+
+#other {
+	display:none;
+}
+
+#nav, main {
+	clear:both;
+}
+
+.nav-links {
+	font-size:2em;
+	margin:20px 0 20px 0;
+}
+
+.nav-links a {
+	margin-left:10px;
+	padding:10px;
+	border-style:solid;
+	border-color:#000000;
+	border-radius:5px;
+}
+
+.nav-links a.next_page, .nav-links.prev_page {
+	margin-left:0;
+	border-style:none;
+	border-radius:0;
+}
+} /* end rules for resolutions below 980px */
+
+/* rules for large resolutions */
+@media screen and (min-width:981px)
+{
+	#wrapper {
+		padding-left:auto;
+		margin-left:auto;
+		padding-right:auto;
+		margin-right:auto;
+		width:90%;
+		background-color:#FFFFFF;
+	}
+	
+	main {
+		float:left;
+		clear:left;
+		width:75%;
+	}
+	
+	#nav {
+		float:right;
+		clear:right;
+		width:25%;
+	}
+	
+	.arrow {
+		display:none;
+	}
+	
+	#menu {
+		list-style-type:none;
+		margin:0;
+		padding:0;
+	}
+	
+	#menu li {
+		list-style-type:none;
+		margin:20px 0 20px 0;
+		padding:20px 0 20px 0;
+	}
+	
+	#menu > li {
+		font-family:Verdana, Arial, sans-serif;
+		text-align:center;
+		font-weight:bold;
+	}
+	
+	#menu > li li {
+		font-family:Baskerville, Georgia, Times, Times New Roman, serif;
+		font-weight:normal;
+	}
+	
+	#search {
+		text-align:right;
+	}
+	
+	#search input {
+		max-width:100%;
+	}
+	
+} /* end rules for large screens */
+
+/* print rules */
+@media print {
+	#banner {
+		display:none;
+	}
+	
+	div.divider {
+		display:none;
+	}
+	
+	#post-nav {
+		display:none;
+	}
+	
+	/* display link addresses on print, which may be ignored in some browsers. Does not work too well for internal links. */ 
+ article a:link:after, article a:visited:after { 
+ 										display:inline-block; 
+ 										margin-left:5px; 
+ 										font-style:normal; 
+ 										content: " (" attr(href) ")"; 
+ 									}
+									
+									article header a:link:after, article header a:visited:after { 
+ 										content:normal;
+ 									}
+									
+									
+a:link, a:visited {
+	font-weight:bold;
+	color:#520;
+}
+ 									 
+ /* display abbreviation and acronym meanings on printed page, if page uses the respective abbr and acronym tags. */ 
+ abbr:after, acronym:after { 
+ 	content: " (" attr(title) ")"; 
+ } 
+
+	
+	main {
+		width:100%;
+	}
+	
+	#nav {
+		display:none;
+		float:right;
+		clear:right;
+		width:25%;
+	}
+	
+	.arrow {
+		display:none;
+	}
+	
+	#menu {
+		list-style-type:none;
+		margin:0;
+		padding:0;
+	}
+	
+	#menu li {
+		list-style-type:none;
+		margin:20px 0 20px 0;
+		padding:20px 0 20px 0;
+	}
+	
+	#menu > li {
+		font-family:Verdana, Arial, sans-serif;
+		text-align:center;
+		font-weight:bold;
+	}
+	
+	#menu > li li {
+		font-family:Baskerville, Georgia, Times, Times New Roman, serif;
+		text-align:left;
+		font-weight:normal;
+	}
+	
+	#search {
+		text-align:right;
+	}
+	
+	#search input {
+		max-width:100%;
+	}
+	
+	footer {
+		display:none;
+	}
+	
+	.socialink, #comments {
+		display:none;
+	}
+} /* end print rules */

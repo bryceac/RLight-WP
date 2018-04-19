@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* the following applies no matter what */
+.bold {
+	font-weight:bold;
+}
+
+.italic {
+		font-style:italic;
+	}
+
+.sans {
+		font-family:sans-serif;
+	}
+
+.serif {
+			font-family:serif;
+		}
+
+.left {
+	float:left;
+	clear:left;
+}
+
+.right {
+	float:right;
+	clear:right;
+}
+
+div.gallery {
+	max-width:100%;
+	display:table;
+}
+
+div.grow {
+	display:table-row;
+}
+
+div.gcell {
+	display:table-cell;
+	max-width:50%;
+	vertical-align:top;
+}
+
+/* CSS for all screen rules */
+@media screen {
+	.QR {
+		display:none;
+	}
+}
+
+/* CSS for all print rules */
+@media print {
+	.QR a:link:after, .QR a:visited after {
+		content: " (" attr(href) ")";
+	}
+}
