@@ -16,10 +16,14 @@ To install theme, move RLight-WP folder or clone the repo to
 
 Theme will need to be activated for theme to be usable.
 
+==License==
+
+This theme is licensed under the MIT License, whose terms can be viewed in the LICENSE file, just like the original. Wordpress code is licensed under GPL.
+
 ==Misc.==
 
 This project is meant to provide a good basis for a wordpress theme, and was tested on version 4.9.5.
 
 Things should '''mostly''' work right, but there may be things missing, so the theme is not exactly complete.
 
-You can use this a theme, or to make a semidescent starting point.
+You can use this a theme, or to make a semidescent starting point for a theme of your own.
