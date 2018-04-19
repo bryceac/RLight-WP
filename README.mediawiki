@@ -1,0 +1,25 @@
+'''Author:''' Bryce Campbell
+
+'''Copyright:''' 2018 Bryce Campbell
+
+'''Description:''' WordPress port of the [https://github.com/bryceac/RLight Rlight] Habari theme.
+
+'''Version:''' 0.1
+
+==How to install==
+
+To install theme, move RLight-WP folder or clone the repo to
+
+<pre>
+/path/to/blog/wp-content/themes/
+</pre>
+
+Theme will need to be activated for theme to be usable.
+
+==Misc.==
+
+This project is meant to provide a good basis for a wordpress theme, and was tested on version 4.9.5.
+
+Things should '''mostly''' work right, but there may be things missing, so the theme is not exactly complete.
+
+You can use this a theme, or to make a semidescent starting point.

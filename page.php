@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
-<main id="main">
+<main id="main"> <!-- container to hold page content -->
   <?php if (have_posts() ) : ?>
     <?php while (have_posts() ) : the_post(); ?>
       <article class="entry">
@@ -19,5 +19,5 @@
   <?php else: ?>
     <p>Sorry, there is no content to be found.</p>
   <?php endif; ?>
-</main>
+</main> <!-- close content container -->
 <?php get_footer(); ?>

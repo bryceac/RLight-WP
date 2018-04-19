@@ -1,6 +1,6 @@
-<?php get_header(); ?>
-<?php get_sidebar(); ?>
-<main id="main">
+<?php get_header(); ?> <!-- include header file -->
+<?php get_sidebar(); ?> <!-- include sidebar file -->
+<main id="main"> <!-- place to hold post list -->
   <?php if (have_posts() ) : ?>
     <?php while (have_posts() ) : the_post(); ?>
       <article class="entry">
@@ -20,5 +20,5 @@
   <?php else: ?>
     <p>Sorry, there is no content to be found.</p>
   <?php endif; ?>
-</main>
-<?php get_footer(); ?>
+</main> <!-- close container holding posts -->
+<?php get_footer(); ?> <!-- include footer file -->
