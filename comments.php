@@ -7,7 +7,7 @@
 	<ul>
 	<?php foreach($comments as $comment) { ?>
 			<li>
-			<article class="coment">
+			<article class="comment">
 			<header>
 			<?php if ($comment->comment_author_url) { ?>
 			<a href="<?php echo $comment->comment_author_url; ?>" rel="nofollow"><h3><?php echo $comment->comment_author; ?></h3></a>
