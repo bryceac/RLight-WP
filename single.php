@@ -24,6 +24,13 @@
             <?php the_tags(); ?> <!-- retrieve tags -->
           </div>
         </footer> <!-- close article footer -->
+
+        <?php
+        // display comments and/or comment form, available
+        if (comments_open() || get_comments_number()) {
+          comments_template();
+        } 
+        ?>
       </article> <!-- close article -->
     <?php endwhile; ?>
     <?php } ?>
