@@ -13,13 +13,17 @@
           <div style="text-align:center">
             <?php the_tags(); ?>
           </div>
+          <hr>
+
+          <?php
+            // display comments and/or comment form, available
+            if (comments_open() || get_comments_number()) {
+              comments_template();
+            } 
+          ?>
+          
+        </footer> <!-- close article footer -->
         </footer>
-        <?php
-        // display comments and/or comment form, available
-        if (comments_open() || get_comments_number()) {
-          comments_template();
-        } 
-        ?>
       </article>
     <?php endwhile ?>
   <?php else: ?>

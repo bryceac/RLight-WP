@@ -23,14 +23,16 @@
           <div style="text-align:center">
             <?php the_tags(); ?> <!-- retrieve tags -->
           </div>
-        </footer> <!-- close article footer -->
+          <hr>
 
-        <?php
-        // display comments and/or comment form, available
-        if (comments_open() || get_comments_number()) {
-          comments_template();
-        } 
-        ?>
+          <?php
+            // display comments and/or comment form, available
+            if (comments_open() || get_comments_number()) {
+              comments_template();
+            } 
+          ?>
+          
+        </footer> <!-- close article footer -->
       </article> <!-- close article -->
     <?php endwhile; ?>
     <?php } ?>
