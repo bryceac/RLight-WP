@@ -10,14 +10,14 @@
 	$comments_query = new WP_Comment_Query;
 	$comments = $comments_query->query( $args );
 
-	// retrieve comments
+	// retrieve comments, if available
 	if ( $comments ) { ?>
 		<ol>
 		<?php foreach ($comments as $comment ) { ?>
-
+			<li><?php echo($comment->content); ?></li>
 		<?php }
 	} else { ?>
-
+			<p>No comments can be found for this article.</p>
 	<?php } ?>
 
 	<?php comment_form(); ?>
