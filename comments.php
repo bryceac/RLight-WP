@@ -1,64 +1,25 @@
-<?php
-// generates comment stuff. Initially Copied from the twentyseventeen theme, in order to reduce time.
-if ( post_password_required() ) {
-	return;
-}
-?>
-
 <section id="comments"> <!-- change comment area to section -->
 
 	<?php
-	// You can start editing here -- including this comment!
-	if ( have_comments() ) : ?>
-		<h2 class="comments-title">
-			<?php
-				$comments_number = get_comments_number();
-				if ( '1' === $comments_number ) {
-					/* translators: %s: post title */
-					printf( _x( 'One Reply to &ldquo;%s&rdquo;', 'comments title', 'twentyseventeen' ), get_the_title() );
-				} else {
-					printf(
-						/* translators: 1: number of comments, 2: post title */
-						_nx(
-							'%1$s Reply to &ldquo;%2$s&rdquo;',
-							'%1$s Replies to &ldquo;%2$s&rdquo;',
-							$comments_number,
-							'comments title'
-							// 'twentyseventeen'
-						),
-						number_format_i18n( $comments_number ),
-						get_the_title()
-					);
-				}
-			?>
-		</h2>
+	// get only approved comments
+	$args = array(
+		'status' => 'approved'
+	);
 
-		<ol class="comment-list">
-			<?php
-				wp_list_comments( array(
-					'avatar_size' => 100,
-					'style'       => 'ol',
-					'short_ping'  => true,
-					'reply_text'  => twentyseventeen_get_svg( array( 'icon' => 'mail-reply' ) ) . __( 'Reply', 'twentyseventeen' ),
-				) );
-			?>
-		</ol>
+	// comment query, based on Wordpress developer handbook
+	$comments_query = new WP_Comment_Query;
+	$comments = $comments_query->query( $args );
 
-		<?php /* the_comments_pagination( array(
-			'prev_text' => twentyseventeen_get_svg( array( 'icon' => 'previous' ) ) . '<span class="screen-reader-text">' . __( 'Previous', 'twentyseventeen' ) . '</span>',
-			'next_text' => '<span class="screen-reader-text">' . __( 'Next', 'twentyseventeen' ) . '</span>' . twentyseventeen_get_svg( array( 'icon' => 'next' ) ),
-		) ); */
+	// retrieve comments
+	if ( $comments ) { ?>
+		<ol>
+		<?php foreach ($comments as $comment ) { ?>
 
-	endif; // Check for have_comments().
+		<?php }
+	} else { ?>
 
-	// If comments are closed and there are comments, let's leave a little note, shall we?
-	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
+	<?php } ?>
 
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'twentyseventeen' ); ?></p>
-	<?php
-	endif;
-
-	comment_form();
-	?>
+	<?php comment_form(); ?>
 
 </section><!-- close comment area -->
