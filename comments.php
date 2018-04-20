@@ -9,7 +9,7 @@
 		if ($comments) { ?>
 	<ul>
 	<?php foreach($comments as $comment) { ?>
-			<li><?php $comment->content; ?></li>
+			<li><?php echo $comment->content; ?></li>
 		<?php } ?>
 	</ul>
 <?php } else { ?>
