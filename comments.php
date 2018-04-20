@@ -10,11 +10,11 @@
 			<article>
 			<header>
 			<?php if ($comment->comment_author_url) { ?>
-			<a href="<?php echo $comment->get_comment_author_url; ?>" rel="nofollow"><h3><?php echo $comment->get_comment_author; ?></h3></a>
+			<a href="<?php echo $comment->comment_author_url; ?>" rel="nofollow"><h3><?php echo $comment->comment_author; ?></h3></a>
 			<?php } else { ?>}
 			<h3><?php echo $comment->get_comment_author; ?></h3>
 			<?php } ?>
-			<time datetime="<?php echo $comment->get_comment_date; ?>"><?php echo $comment->get_comment_date; ?></time>
+			<time datetime="<?php echo $comment->comment_date; ?>"><?php echo $comment->get_comment_date; ?></time>
 			</header>
 			<?php echo $comment->comment_content; ?>
 			</article>
