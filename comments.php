@@ -3,6 +3,7 @@
 	<?php
 	// get only approved comments
 	$args = array(
+		'post_id' => XXX,
 		'status' => 'approved'
 	);
 
