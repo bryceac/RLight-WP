@@ -12,11 +12,12 @@
 
 	// retrieve comments, if available
 	if ( $comments ) { ?>
-		<ol>
+		<ul>
 		<?php foreach ($comments as $comment ) { ?>
 			<li><?php echo($comment->content); ?></li>
-		<?php }
-	} else { ?>
+		<?php } ?>
+		</ul>
+	<?php } else { ?>
 			<p>No comments can be found for this article.</p>
 	<?php } ?>
 

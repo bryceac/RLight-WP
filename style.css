@@ -116,7 +116,7 @@ a:active {
  
  
  /* make comment field adjust to screen size */ 
- #comments textarea { 
+ #commentform textarea { 
  	max-width:100%; 
  	} 
 
