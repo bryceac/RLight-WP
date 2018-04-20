@@ -1,10 +1,7 @@
 <section id="comments"> <!-- change comment area to section -->
 
 	<?php // retrieve comments
- 		$comments = get_comments(array(
-			'post_id' => $post->ID,
-			'status' => 'approve' //Change this to the type of comments to be displayed
-		));
+ 		$comments = get_approved_comments($post>ID);
 
 		if ($comments) { ?>
 	<ul>
