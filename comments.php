@@ -1,6 +1,12 @@
 <section id="comments"> <!-- change comment area to section -->
 
-	<?php // retrieve comments ?>
+	<?php // retrieve comments
+ 		$comments = get_comments(array(
+			'post_id' => XXX,
+			'status' => 'approve' //Change this to the type of comments to be displayed
+		));
+
+		if ($comments) { ?>
 	<ul>
 	<?php
 	wp_list_comment(array (
@@ -9,6 +15,9 @@
 	)); 
 	?>
 	</ul>
+<?php } else { ?>
+	<p>No comments found for article.</p>
+<?php } ?>
 
 	<?php comment_form(); ?>
 
