@@ -44,6 +44,10 @@ article h1, article h2, article h3, article h4, article h5, article h6 {
 	text-align:center;
 }
 
+.comment h1, .comment h2, .comment h3, .comment h4, .comment h5, .comment h6 {
+	text-align:left;
+}
+
 #banner {
 	color:#F5F5DC;
 	background: linear-gradient(#0099FF, #000F1A);
@@ -354,10 +358,6 @@ article footer {
 	margin-left:0;
 	border-style:none;
 	border-radius:0;
-}
-
-.comment h1, .comment h2, .comment h3, .comment h4, .comment h5, .comment h6 {
-	text-align:left;
 }
 
 } /* end rules for resolutions below 980px */
