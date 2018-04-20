@@ -6,7 +6,7 @@
 </li> <!-- end nested list -->
   <li onClick="return true"><span class="bold sans">Misc.</span> <span class="arrow">&#709;</span> <!-- misc holds extra content -->
     <?php wp_nav_menu(array('theme_location' => 'extras-menu', 'menu_class' => null, 'container' => 'ul', 'container_class' => null )); ?>
-  </li> <<!-- end nested list -->
+  </li><!-- end nested list -->
   <li onClick="return true"><span class="bold sans">Meta</span> <span class="arrow">&#709;</span> <!-- meta holds the login area -->
   <ul> <!-- create nested list -->
     <li><?php wp_loginout(); ?></li>
