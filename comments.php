@@ -2,18 +2,15 @@
 
 	<?php // retrieve comments
  		$comments = get_comments(array(
-			'post_id' => XXX,
+			'post_id' => $post->ID,
 			'status' => 'approve' //Change this to the type of comments to be displayed
 		));
 
 		if ($comments) { ?>
 	<ul>
-	<?php
-	wp_list_comment(array (
-		'max_depth' => '6',
-		'style' => 'ul'
-	)); 
-	?>
+	<?php foreach($comments as $comment) { ?>
+			<li><?php $comment->content; ?></li>
+		<?php } ?>
 	</ul>
 <?php } else { ?>
 	<p>No comments found for article.</p>
