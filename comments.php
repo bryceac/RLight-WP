@@ -7,14 +7,14 @@
 	<ul>
 	<?php foreach($comments as $comment) { ?>
 			<li>
-			<article>
+			<article class="coment">
 			<header>
 			<?php if ($comment->comment_author_url) { ?>
 			<a href="<?php echo $comment->comment_author_url; ?>" rel="nofollow"><h3><?php echo $comment->comment_author; ?></h3></a>
 			<?php } else { ?>}
 			<h3><?php echo $comment->get_comment_author; ?></h3>
 			<?php } ?>
-			<p class="commentdate"><time datetime="<?php echo $comment->comment_date; ?>"><?php echo $comment->comment_date; ?></time></p>
+			<p><time datetime="<?php echo $comment->comment_date; ?>"><?php echo $comment->comment_date; ?></time></p>
 			</header>
 			<?php echo $comment->comment_content; ?>
 			</article>

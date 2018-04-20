@@ -356,8 +356,8 @@ article footer {
 	border-radius:0;
 }
 
-.commentdate {
-	text-align:center;
+.comment h1, .comment h2, .comment h3, .comment h4, .comment h5, .comment h6 {
+	text-align:left;
 }
 
 } /* end rules for resolutions below 980px */
