@@ -14,7 +14,7 @@
 			<?php } else { ?>}
 			<h3><?php echo $comment->get_comment_author; ?></h3>
 			<?php } ?>
-			<time datetime="<?php echo $comment->comment_date; ?>"><?php echo $comment->comment_date; ?></time>
+			<time datetime="<?php echo $comment->comment_date; ?>" class="commentdate"><?php echo $comment->comment_date; ?></time>
 			</header>
 			<?php echo $comment->comment_content; ?>
 			</article>

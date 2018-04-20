@@ -355,6 +355,11 @@ article footer {
 	border-style:none;
 	border-radius:0;
 }
+
+.commentdate {
+	text-align:center;
+}
+
 } /* end rules for resolutions below 980px */
 
 /* rules for large resolutions */
