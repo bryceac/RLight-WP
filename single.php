@@ -21,7 +21,7 @@
           <?php esc_html(the_content()); ?> <!-- get post content -->
         <footer> <!-- specify post footer details -->
           <div style="text-align:center">
-            <?php the_tags(); ?> <!-- retrieve tags -->get
+            <?php the_tags(); ?> <!-- retrieve tags -->
           </div>
 
           <?php
