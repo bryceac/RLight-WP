@@ -10,6 +10,8 @@
   <li onClick="return true"><span class="bold sans">Meta</span> <span class="arrow">&#709;</span> <!-- meta holds the login area -->
   <ul> <!-- create nested list -->
     <li><?php wp_loginout(); ?></li>
+    <li><a href="<?php bloginfo('rss2_url'); ?>">Entry Feed</a></li>
+    <li><a href="<?php bloginfo('comments_rss2_url'); ?>">Comment Feed</a></li>
   </ul> <!-- end nested list -->
   </li> <!-- close list item -->
   </ul> <!-- end navigation list -->

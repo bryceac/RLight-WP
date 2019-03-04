@@ -16,12 +16,12 @@
       <article class="entry">
         <header> <!-- show import metadata, like title and published date -->
           <h2><a href="<?php the_permalink(); ?>"><?php esc_html(the_title()); ?></a></h2>
-          <p class="pubDate"><time class="published" datetime="<?php the_date( 'c' ); ?>"><?php the_date(); ?></time></p>
+          <p class="pubDate"><time class="published" datetime="<?php echo get_the_date( 'c' ); ?>"><?php echo get_the_date(); ?></time></p>
         </header>
           <?php esc_html(the_content()); ?> <!-- get post content -->
         <footer> <!-- specify post footer details -->
           <div style="text-align:center">
-            <?php the_tags(); ?> <!-- retrieve tags -->
+            <?php the_tags(); ?> <!-- retrieve tags -->get
           </div>
 
           <?php
