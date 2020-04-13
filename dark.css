@@ -2,7 +2,7 @@
 /* CSS Document */
 
 /* rules to be applied when user has dark mode set. */
-@media (prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark) {
 			body {
 				background-color: #000000;
 				color: #FFFFFF;
