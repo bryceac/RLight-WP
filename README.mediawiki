@@ -4,7 +4,18 @@
 
 '''Description:''' WordPress port of the [https://github.com/bryceac/RLight Rlight] Habari theme.
 
-'''Version:''' 0.1
+'''Version:''' 0.1.1
+
+==Version History==
+
+<dl>
+<dt style="font-weight:bold;">0.1</dt>
+<dd>
+Initial release.
+</dd>
+<dt style="font-weight:bold;">0.1.1</dt>
+<dd>Minor update. Adds dark mode, to provide a darker color scheme.</dd>
+</dl>
 
 ==How to install==
 
