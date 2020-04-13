@@ -22,6 +22,6 @@
   function rlight_enqueue_style() {
 	wp_enqueue_style('style', get_stylesheet_uri());
   wp_enqueue_style('custom', get_template_directory_uri() . '/common.css');
-  wp_enqueue_style('dark', get_template_directory_uri() . '/dark.css')
+  wp_enqueue_style('dark', get_template_directory_uri() . '/dark.css');
   }
 ?>
