@@ -430,10 +430,6 @@ article footer {
 
 /* print rules */
 @media print {
-	/* make text black */
-	body {
-		color: #000000;
-	}
 
 	#banner {
 		display:none;
