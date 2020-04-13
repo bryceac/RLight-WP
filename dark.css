@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* rules to be applied when user has dark mode set. */
+@media (prefers-color-scheme: dark) {
+			body {
+				background-color: #000000;
+				color: #FFFFFF;
+			}
+			
+			#wrapper {
+				background-color: #3F3F3F;
+			}
+			
+			#banner {
+				background: linear-gradient(#888888, #000000);
+				background-color: #888888;
+			}
+			
+			article p {
+				line-height: 1.7;
+			}
+			
+			a:link {
+				color: #00ffff;
+			}
+			
+			a:visited {
+				color: #FFFF00;
+			}
+		}
