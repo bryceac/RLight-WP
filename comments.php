@@ -1,7 +1,7 @@
 <section id="comments"> <!-- change comment area to section -->
 
 	<?php // retrieve comments
- 		$comments = get_approved_comments($post>ID);
+ 		$comments = get_approved_comments($post->ID);
 
 		if ($comments) { ?>
 	<ul>
